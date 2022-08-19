@@ -1,0 +1,719 @@
+body
+{
+	dislay: block;
+	width: 100%;
+}
+
+body > section
+{
+	display: block;
+	width: 100%;
+	margin: auto;
+	padding: 2rem 0;
+
+	border-bottom: 0.10rem solid rgba(255, 255, 255, 0.09);
+	box-shadow: inset 0 0.25rem 0.5rem rgba(0, 0, 0, 0.13),
+				inset 0 -0.10rem 0 0 rgba(0, 0, 0, 0.217);
+}
+
+section#registration
+{
+	padding-bottom: 0;
+	border-bottom: 0;
+	box-shadow: inset 0 0.25rem 0.5rem rgba(0, 0, 0, 0.13);
+}
+section#lookup
+{
+	margin-top: 0;
+	box-shadow: inset 0 -0.10rem 0 0 rgba(0, 0, 0, 0.217);
+}
+
+section#wallets
+{
+	background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.20) 0%, rgba(0, 0, 0, 0.10) 100%);
+}
+
+section#testimonies
+{
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.10) 100%);
+}
+
+section > div,
+section > form
+{
+	display: block;
+	width: 150ex !important;
+	margin: auto;
+}
+
+section#introduction > div
+{
+	background: url(../img/logo.png);
+	background-size: 22rem;
+	background-repeat: no-repeat;
+	background-position: 95%;
+	padding-left: 1rem;
+	padding-right: 24rem;
+}
+
+section#introduction
+{
+	display: flex;
+	flex-direction: column;
+	align-content: space-around;
+	justify-content: space-around;
+
+	width: 100% !important;
+	height: 27rem;
+	background-image: linear-gradient(-208deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.3) 51%, rgba(255, 255, 255, 0.1) 100%);
+
+	padding: 3rem 2rem;
+	padding-top: 6rem;
+}
+
+section#introduction > div > header
+{
+	font-weight: bold;
+	text-align: left;
+	font-size: 4rem;
+	text-shadow: 0.05rem 0.05rem 0.1rem white;
+}
+
+section#introduction > div > p
+{
+	text-align: left;
+	font-size: 1.37rem;
+	padding-right: 1rem;
+	margin-top: 0.5rem;
+	color: rgba(0, 0, 0, 0.77);
+}
+
+section#introduction > div > p:last-child
+{
+	margin-top: 1rem;
+}
+
+section#introduction > div > p > b
+{
+	font-size: 1.5rem;
+	border-bottom: 0.1rem dashed rgba(0, 0, 0, 0.35);
+}
+
+
+/**************************************/
+/**            Navigation            **/
+/**************************************/
+
+nav#navigation
+{
+	position: fixed;
+
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 5.25rem;
+	padding: 0;
+
+	transition: height 0.30s;
+
+	background-color: rgb(32, 64, 48);
+	background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 20%, rgba(255, 255, 255, 0.1) 95%, rgba(255, 255, 255, 0.2) 100%);
+
+	border-bottom: 0.10rem solid rgba(160, 224, 160, 1.00);
+	box-shadow: 0 0.10rem 0.5rem rgba(0, 0, 0, 1.21);
+	text-align: center;
+	z-index: 9;
+}
+
+nav#navigation > div
+{
+	display: flex;
+	align-content: space-around;
+	justify-content: space-between;
+	width: 150ex;
+	height: 100%;
+	margin: auto;
+}
+
+nav#navigation > div > a
+{
+	display: flex;
+	flex-direction: column;
+	color: rgb(160, 224, 160);
+	text-decoration: none;
+	font-weight: normal;
+	padding: 0.5rem 1.5rem;
+}
+
+nav#navigation > div > a.shown
+{
+	color: white;
+	text-shadow: 0 0 0.25rem rgb(75, 200, 70), 0 0 0.75rem rgba(255, 255, 255, 0.50);
+}
+
+nav#navigation > div > a > span
+{
+	font-size: 1.25rem;
+}
+
+nav#navigation > div > a:hover
+{
+	color: rgba(255, 153, 0, 1);
+	text-shadow: 0px 0px 2px black, 0px 0px 3px green, 0px 0px 2px green;
+}
+
+nav#navigation > div > a > i
+{
+	display: inline-block;
+
+	font-size: 1.5rem;
+	padding: 0.5rem;
+	width: 100%;
+	height: 2.5rem;
+
+	transition: width 0.30s, height 0.30s;
+	margin: auto;
+}
+
+body.scrolled > nav#navigation
+{
+	height: 2.5rem !important;
+}
+body.scrolled > nav#navigation > div > a
+{
+	flex-direction: row;
+}
+body.scrolled > nav#navigation > div > a > i
+{
+	padding: 0 !important;
+	text-align: left;
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+	margin-right: 0.5rem;
+}
+
+/**************************************/
+/**            Register              **/
+/**************************************/
+
+section#registration > form
+{
+	display: flex;
+}
+
+section#registration > form > fieldset
+{
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-content: stretch;
+	align-items: stretch;
+	justify-content: space-between;
+
+	flex: 1;
+	flex-grow: 1;
+	flex-basis: 33.32%;
+
+	min-width: calc(50ex - 2rem);
+	width: calc(50ex - 2rem);
+	margin: 1rem;
+}
+
+section#registration > form button
+{
+	width: 100%;
+}
+section#registration > form > fieldset:nth-child(1) > legend:before { content: '1'; }
+section#registration > form > fieldset:nth-child(2) > legend:before { content: '2'; }
+section#registration > form > fieldset:nth-child(3) > legend:before { content: '3'; }
+
+section#registration > form > fieldset > legend:before
+{
+	position: absolute;
+	top: -1.70rem;
+	left: -1.10rem;
+
+	display: inline-block;
+	box-sizing: border-box;
+
+	width: 2.0rem;
+	height: 2.0rem;
+	line-height: 1.75rem;
+	text-align: center;
+	border: 0.15rem solid rgba(255, 255, 255, 1);
+	box-shadow: 0.05rem 0.15rem 0.25rem rgba(0, 0, 0, 0.31);
+	border-radius: 999rem;
+	background-color: rgb(50, 150, 45);
+	font-weight: bold;
+	color: white;
+}
+section#registration > form > fieldset.inactive > legend:before
+{
+	background-color: rgb(160, 160, 160);
+}
+section#registration > form > fieldset.active > legend:before
+{
+	background-color: rgb(255, 153, 0);
+}
+
+section#registration > form > fieldset > label:last-child
+{
+	align-self: flex-end;
+}
+
+section#registration > form > fieldset > label > span:first-child
+{
+	font-style: italic;
+	font-size: 0.75rem;
+	color: rgba(0, 0, 0, 0.75);
+	padding-left: 0.30rem;
+}
+
+section#registration > form > fieldset > label > input#alias_name
+{
+	text-align: left;
+}
+
+section#registration > form > fieldset > label > textarea#alias_paycode
+{
+	padding: 0.5rem;
+	font-size: 0.95rem;
+	height: 5.25em;
+	overflow: hidden;
+}
+
+section#registration > form > fieldset.inactive > ul,
+section#registration > form > fieldset.inactive > ul *
+{
+	opacity: 0.67;
+	color: transparent;
+	text-shadow: 0 0 0.10rem rgba(0, 0, 0, 0.77);
+}
+
+section#registration > form > fieldset > ul
+{
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-around;
+	justify-content: space-between;
+	list-style-type: none;
+}
+
+section#registration > form > fieldset > ul > li
+{
+	width: 100%;
+	padding-bottom: 0.5rem;
+}
+
+section#registration > form > fieldset > ul > li > span
+{
+	display: block;
+	word-break: break-all;
+}
+
+section#registration > form > fieldset > ul > li > span > i,
+section#registration > form > fieldset > ul > li > span > b
+{
+	font-style: normal;
+	font-family: monospace;
+}
+section#registration > form > fieldset > ul > li > i#alias_name_predication
+{
+	display: inline-block;
+	word-break: break-all;
+}
+
+section#registration > form > fieldset > ul > li > span:first-child
+{
+	color: rgba(0, 0, 0, 0.44);
+}
+
+section#registration > form > fieldset > ul > li > span:first-child:after
+{
+	content: ':';
+}
+
+
+/**************************************/
+/**            Lookup                **/
+/**************************************/
+
+section#lookup > form
+{
+	margin-top: -1rem;
+	padding-top: 1rem;
+	border-top: 0.10rem solid rgba(0, 0, 0, 0.23);
+}
+
+section#lookup > form > fieldset
+{
+	flex: 1;
+	flex-wrap: wrap;
+
+	margin: 1rem;
+}
+
+section#lookup > form > fieldset > input
+{
+	margin: 0;
+}
+
+section#lookup > form > fieldset > input:nth-child(2) { width: calc(99.5% - 12ex); }
+section#lookup > form > fieldset > input:nth-child(3) { width: 12ex; }
+
+.no_result
+{
+	display: block;
+	font-style: italic;
+	text-align: center;
+	padding: 2rem !important;
+}
+
+section#lookup > form > fieldset > ul#result_list
+{
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	margin-top: 1rem;
+}
+
+section#lookup > form > fieldset > ul#result_list > li
+{
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: calc(33.3333% - 0.667rem);
+	margin-right: 1rem;
+	margin-bottom: 1rem;
+	border-radius: 0.33rem;
+	background-color: white;
+	padding-bottom: 1rem;
+	border: 0.10rem solid rgb(256, 153, 0);
+	box-shadow: 0 0.10rem 0.25rem rgba(0, 0, 0, 0.21);
+}
+section#lookup > form > fieldset > ul#result_list > li:nth-child(3n)
+{
+	margin-right: 0;
+}
+
+section#lookup > form > fieldset > ul#result_list > li > *
+{
+	display: block;
+}
+
+section#lookup > form > fieldset > ul#result_list > li > span.account_identifier
+{
+	background-color: rgb(255, 153, 0);
+	border-top-left-radius: 0.15rem;
+	border-top-right-radius: 0.15rem;
+}
+
+section#lookup > form > fieldset > ul#result_list > li.unconfirmed
+{
+	border: 0.10rem solid rgb(160, 160, 160);
+}
+section#lookup > form > fieldset > ul#result_list > li.unconfirmed > span.account_identifier
+{
+	background-color: rgb(160, 160, 160);
+}
+
+section#lookup > form > fieldset > ul#result_list > li > span.account_identifier
+{
+	padding-left: 5.0rem;
+	font-size: 0.75rem;
+}
+section#lookup > form > fieldset > ul#result_list > li > span.account_identifier > span
+{
+	margin-top: 0.75rem;
+	font-size: 1.5rem;
+	display: block;
+}
+section#lookup > form > fieldset > ul#result_list > li > span.account_identifier > a
+{
+	color: black;
+}
+section#lookup > form > fieldset > ul#result_list > li > span.account_identifier > a > i
+{
+	display: inline-block;
+	margin-bottom: 0.75rem;
+	border-bottom: 0.10rem dotted black;
+	font-family: monospace;
+	font-size: 0.75rem !important; 
+}
+
+section#lookup > form > fieldset > ul#result_list > li > span.account_identifier > a > i:last-child
+{
+	opacity: 0.50;
+	border: 0;
+}
+section#lookup > form > fieldset > ul#result_list > li > span.account_payment_link
+{
+	display: block;
+	width: 100%;
+	text-align: center;
+	position: absolute;
+	bottom: 0.5rem;
+	padding: 0rem 0.75rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+section#lookup > form > fieldset > ul#result_list > li > p
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	font-style: italic;
+	color: rgba(0, 0, 0, 0.65);
+	
+	height: 100%;
+	width: 100%;
+}
+section#lookup > form > fieldset > ul#result_list > li > span.emoji
+{
+	display: block;
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+	font-family: "Noto Color Emoji";
+	font-size: 2.25rem;
+	line-height: 3.5rem;
+	text-align: center;
+	width: 4.0rem;
+	height: 3.5rem;
+	background-color: white;
+	border-radius: 0.25rem;
+}
+
+section#lookup > form > fieldset > ul#result_list > li > canvas
+{
+	padding: 1rem;
+}
+
+/**************************************/
+/**            Testimonies           **/
+/**************************************/
+
+section#testimonies > div
+{
+	padding: 1rem;
+	padding-bottom: 0;
+}
+
+section#testimonies > div > ul
+{
+	display: flex;
+	flex-wrap: wrap;
+
+	align-content: space-around;
+	justify-content: space-between;
+	list-style-type: none;
+
+	background-color: white;
+	box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.21);
+	border: 0.05rem solid rgba(0, 0, 0, 0.25);
+	border-radius: 2rem;
+}
+
+section#testimonies > div > ul > li
+{
+	flex-basis: 50%;
+	padding: 1rem;
+	margin: 0;
+	border-radius: 0;
+	border-right: 0.1rem solid rgba(0, 0, 0, 0.19);
+	border-bottom: 0.1rem solid rgba(0, 0, 0, 0.19);
+}
+
+section#testimonies > div > ul > li:nth-child(odd)
+{
+	margin-right: 0;
+}
+
+section#testimonies > div > ul > li:nth-child(1),
+section#testimonies > div > ul > li:nth-child(2),
+section#testimonies > div > ul > li:nth-child(3)
+{
+	flex-basis: 33.33%;
+	display: inline-block;
+}
+
+section#testimonies > div > ul > li:nth-child(3),
+section#testimonies > div > ul > li:nth-child(5),
+section#testimonies > div > ul > li:nth-child(7)
+{
+	border-right: 0;
+}
+
+section#testimonies > div > ul > li:nth-child(6),
+section#testimonies > div > ul > li:nth-child(7)
+{
+	border-bottom: 0;
+}
+
+section#testimonies > div > ul > li > div
+{
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 0.25rem;
+	width: calc(100% - 8rem);
+}
+
+section#testimonies > div > ul > li > img
+{
+	display: inline-block;
+	vertical-align: middle;
+	width: 7rem;
+	border-radius: 1rem;
+	margin-right: 0.5rem;
+}
+section#testimonies > div > ul > li:nth-child(1) > img,
+section#testimonies > div > ul > li:nth-child(2) > img,
+section#testimonies > div > ul > li:nth-child(3) > img
+{
+	width: 100%;
+	border-radius: 1rem;
+	margin-bottom: 0.5rem;
+}
+section#testimonies > div > ul > li > div > span:nth-child(1)
+{
+	display: inline-block;
+	text-align: left;
+	margin-top: 0.25rem;
+	font-size: 1.33rem;
+	line-height: 1.33rem;
+	color: black;
+	width: 100%;
+}
+
+section#testimonies > div > ul > li > div > span:nth-child(2)
+{
+	position: relative;
+	display: inline-block;
+	width: 100%;
+	text-align: left;
+	font-size: 0.80rem;
+	font-weight: bold;
+	font-style: italic;
+	padding-bottom: 0.25rem;
+	color: rgba(0, 0, 0, 0.65);
+}
+section#testimonies > div > ul > li > div > span:nth-child(2):before
+{
+	content: '- ';
+}
+
+section#testimonies > div > ul > li:nth-child(1) > div > span:nth-child(2):before,
+section#testimonies > div > ul > li:nth-child(2) > div > span:nth-child(2):before,
+section#testimonies > div > ul > li:nth-child(3) > div > span:nth-child(2):before
+{
+	content: '';
+}
+
+section#testimonies > div > ul > li:nth-child(1) > div,
+section#testimonies > div > ul > li:nth-child(2) > div,
+section#testimonies > div > ul > li:nth-child(3) > div
+{
+	width: 100%;
+}
+
+section#testimonies > div > ul > li:nth-child(1) > div > span,
+section#testimonies > div > ul > li:nth-child(2) > div > span,
+section#testimonies > div > ul > li:nth-child(3) > div > span
+{
+	text-align: center;
+}
+
+section#testimonies > div > ul > li > div > span:nth-child(3):before
+{
+	content: '~ ';
+}
+
+/**************************************/
+/**            Wallets               **/
+/**************************************/
+section#wallets > div > ul
+{
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+}
+section#wallets > div > ul > li
+{
+	width: calc(25% - 2rem);
+	margin: 1rem;
+	background-color: white;
+	box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.21);
+	border: 0.1rem solid rgba(0, 0, 0, 0.25);
+}
+section#wallets > div > ul > li.positive { border: 0.1rem solid rgba(0, 255, 0, 0.5); }
+section#wallets > div > ul > li.pending { border: 0.1rem solid rgba(192, 192, 0, 0.5); }
+section#wallets > div > ul > li.negative { border: 0.1rem solid rgba(255, 0, 0, 0.5); }
+
+section#wallets > div > ul > li > a.wallet
+{
+	display: inline-block;
+	width: calc(100% - 4rem);
+	height: 4rem;
+	margin: 2rem;
+	margin-bottom: 1.25rem;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+section#wallets > div > ul > li > a.status,
+section#wallets > div > ul > li > span.status
+{
+	display: inline-block;
+	width: 100%;
+	height: 2rem;
+	line-height: 2rem;
+	background-color: gray;
+	font-weight: bold;
+	text-align: center;
+	color: white;
+}
+section#wallets > div > ul > li.positive > .status { background-color: rgb(64, 160, 48); }
+section#wallets > div > ul > li.pending > .status { background-color: rgb(224, 128, 0); }
+section#wallets > div > ul > li.negative > .status { background-color: rgb(242, 32, 32); }
+
+section#wallets > div > ul > li > a.badger { background-image: url('../img/wallet_badger.png'); }
+section#wallets > div > ul > li > a.bchgallery { background-image: url('../img/wallet_bchgallery.png'); }
+section#wallets > div > ul > li > a.bitcoincash { background-image: url('../img/wallet_bitcoincash.png'); }
+section#wallets > div > ul > li > a.bitcoindotcom { background-image: url('../img/wallet_bitcoindotcom.png'); }
+section#wallets > div > ul > li > a.bitpay { background-image: url('../img/wallet_bitpay.png'); }
+section#wallets > div > ul > li > a.bread { background-image: url('../img/wallet_bread.png'); }
+section#wallets > div > ul > li > a.btcdotcom { background-image: url('../img/wallet_btcdotcom.png'); }
+section#wallets > div > ul > li > a.coinbase { background-image: url('../img/wallet_coinbase.png'); }
+section#wallets > div > ul > li > a.coinomi { background-image: url('../img/wallet_coinomi.png'); }
+section#wallets > div > ul > li > a.coinspace { background-image: url('../img/wallet_coinspace.png'); }
+section#wallets > div > ul > li > a.coldlar { background-image: url('../img/wallet_coldlar.png'); }
+section#wallets > div > ul > li > a.copay { background-image: url('../img/wallet_copay.png'); }
+section#wallets > div > ul > li > a.crescentcash { background-image: url('../img/wallet_crescentcash.png'); }
+section#wallets > div > ul > li > a.edge { background-image: url('../img/wallet_edge.png'); }
+section#wallets > div > ul > li > a.electroncash { background-image: url('../img/wallet_electroncash.png'); }
+section#wallets > div > ul > li > a.exodus { background-image: url('../img/wallet_exodus.png'); }
+section#wallets > div > ul > li > a.guarda { background-image: url('../img/wallet_guarda.png'); }
+section#wallets > div > ul > li > a.ifwallet { background-image: url('../img/wallet_ifwallet.png'); }
+section#wallets > div > ul > li > a.ipayyou { background-image: url('../img/wallet_ipayyou.png'); }
+section#wallets > div > ul > li > a.jaxx { background-image: url('../img/wallet_jaxx.png'); }
+section#wallets > div > ul > li > a.keepkey { background-image: url('../img/wallet_keepkey.png'); }
+section#wallets > div > ul > li > a.ledger { background-image: url('../img/wallet_ledger.png'); }
+section#wallets > div > ul > li > a.melisio { background-image: url('../img/wallet_melisio.png'); }
+section#wallets > div > ul > li > a.mobi { background-image: url('../img/wallet_mobi.png'); }
+section#wallets > div > ul > li > a.stash { background-image: url('../img/wallet_stashwallet.png'); }
+section#wallets > div > ul > li > a.strongcoin { background-image: url('../img/wallet_strongcoin.png'); }
+section#wallets > div > ul > li > a.trezor { background-image: url('../img/wallet_trezor.png'); }
+section#wallets > div > ul > li > a.webwallet { background-image: url('../img/wallet_webwallet.png'); }
+
+
+/**************************************/
+/**             Misc                 **/
+/**************************************/
+nav#links > a
+{
+	color: black;
+	font-weight: bold;
+	padding: 1rem;
+}

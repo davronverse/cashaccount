@@ -1,0 +1,45 @@
+- valid: true
+  account_name:
+    string: Jonathan
+    hex:    '4a6f6e617468616e'
+  payment_data:
+    address:     bitcoincash:qr4aadjrpu73d2wxwkxkcrt6gqxgu6a7usxfm96fst
+    type_name:   key hash
+    hash160_hex:   'ebdeb6430f3d16a9c6758d6c0d7a400c8e6bbee4'
+    hex:         '01ebdeb6430f3d16a9c6758d6c0d7a400c8e6bbee4'
+    structure:   <type><hash160>
+  op_return:
+    hex:       '0401010101084a6f6e617468616e1501ebdeb6430f3d16a9c6758d6c0d7a400c8e6bbee4'
+    structure: <OP_PUSH(4)><protocol> <OP_PUSH(8)><account_name> OP_PUSH(21=0x15)><payment_data>
+  transaction:
+    hash: '590d1fdf7e04af0ee08f9194bb9e8d1971bdcbf55d29303d5bf32d4eae5e7136'
+  block:
+    height: 563720
+    hash:   '000000000000000002abbeff5f6fb22a0b3b5c2685c6ef4ed2d2257ed54e9dcb'
+  account_number:
+    value:   100
+    process: <block_height> - <block_modification_value>
+  optional_identicon:
+    index:  96
+    string: ☯
+    process:
+      - block+transaction: '000000000000000002abbeff5f6fb22a0b3b5c2685c6ef4ed2d2257ed54e9dcb590d1fdf7e04af0ee08f9194bb9e8d1971bdcbf55d29303d5bf32d4eae5e7136'
+      - sha256:            '37f1d9b19e25be4d310f3d4a798091ad38a2fb4a3fb66a82ff1d12e2e29a6230'
+      - last_4_bytes:      0xe29a6230
+      - modulus_100:       96
+  collision_hash:
+    string: '5876958390'
+    process:
+      - block+transaction:     '000000000000000002abbeff5f6fb22a0b3b5c2685c6ef4ed2d2257ed54e9dcb590d1fdf7e04af0ee08f9194bb9e8d1971bdcbf55d29303d5bf32d4eae5e7136'
+      - sha256:                '37f1d9b19e25be4d310f3d4a798091ad38a2fb4a3fb66a82ff1d12e2e29a6230'
+      - first_4_bytes:         '37f1d9b1'
+      - decimal_string:        '938596785'
+      - reversed:              '587695839'
+      - right_pad_zeros_to_10: '5876958390'
+  collision_avoidance_part:
+    same_block_collision_hashes: []
+    string: null
+  identifier:
+    complete: Jonathan#100.5876958390
+    short:    Jonathan#100
+    minimal:  Jonathan#100

@@ -1,0 +1,85 @@
+form
+{
+	display: flex;
+	align-items: stretch;
+	align-content: stretch;
+	justify-content: center;
+}
+
+fieldset
+{
+	background-color: transparent;
+	margin: 0.5rem;
+	padding: 0.5rem 1rem;
+	border: 0.1rem solid white;
+	border-radius: 0.33rem;
+}
+
+legend
+{
+	font-size: 1rem;
+	padding: 0 0.5rem;
+}
+
+label
+{
+	display: inline-block;
+	width: 100%;
+	position: relative;
+	margin-bottom: 0.75rem;
+}
+
+label:last-child
+{
+	margin-bottom: 0.25rem;
+}
+
+input, select, textarea
+{
+	width: 100%;
+
+	font-family: monospace;
+	font-size: 1rem;
+	line-height: 1rem;
+	padding: 0.25rem;
+	padding-top: 0.40rem;
+
+	border-radius: 0.25rem;
+	background-color: rgba(255, 255, 255, 0.50);
+	border-color: rgba(255, 255, 255, 0.75);
+	border-width: 0.05rem;
+}
+
+/* Remove text decorations. */
+a, u {
+	text-decoration: none;
+}
+
+section
+{
+	position: relative;
+}
+
+hr 
+{
+	border-top: 0.05rem solid rgba(0, 0, 0, 0.11);
+	border-bottom: 0.05rem solid rgba(0, 0, 0, 0.23);
+	margin: 0.65rem 0rem;
+}
+
+pre
+{
+	padding: 0.25rem;
+	font-family: monospace;
+}
+
+nav
+{
+	padding: 1rem;
+	text-align: center;
+}
+
+b { font-weight: bold; }
+i { font-style: italic; }
+
+th { font-weight: bold; }

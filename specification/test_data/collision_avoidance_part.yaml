@@ -1,0 +1,15 @@
+- string: '03'
+  my_collision_hash: '0321123151'
+  same_block_collision_hashes:
+    - '0627868303'
+    - '0736985563'
+    - '1939867611'
+    - '2501905124'
+    - '3401870692'
+    - '3806873923'
+    - '4677311172'
+    - '5363727682'
+    - '8419948552'
+- string: null
+  my_collision_hash: '5876958390'
+  same_block_collision_hashes: []

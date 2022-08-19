@@ -1,0 +1,312 @@
+account_name:
+  regular_expression: /^[a-zA-Z0-9_]{1,99}$/
+payment_data_types:
+  keyhash_hex:      '01'
+  scripthash_hex:   '02'
+  payment_code_hex: '03'
+  stealth_keys_hex: '04'
+op_return:
+  protocol_hex: '01010101'
+account_number:
+  block_modification_value: 563620
+identicons:
+  - index:     0
+    codepoint: 128123
+    string:    👻
+  - index:     1
+    codepoint: 128018
+    string:    🐒
+  - index:     2
+    codepoint: 128021
+    string:    🐕
+  - index:     3
+    codepoint: 128008
+    string:    🐈
+  - index:     4
+    codepoint: 128014
+    string:    🐎
+  - index:     5
+    codepoint: 128004
+    string:    🐄
+  - index:     6
+    codepoint: 128022
+    string:    🐖
+  - index:     7
+    codepoint: 128016
+    string:    🐐
+  - index:     8
+    codepoint: 128042
+    string:    🐪
+  - index:     9
+    codepoint: 128024
+    string:    🐘
+  - index:     10
+    codepoint: 128000
+    string:    🐀
+  - index:     11
+    codepoint: 128007
+    string:    🐇
+  - index:     12
+    codepoint: 128063
+    string:    🐿
+  - index:     13
+    codepoint: 129415
+    string:    🦇
+  - index:     14
+    codepoint: 128019
+    string:    🐓
+  - index:     15
+    codepoint: 128039
+    string:    🐧
+  - index:     16
+    codepoint: 129414
+    string:    🦆
+  - index:     17
+    codepoint: 129417
+    string:    🦉
+  - index:     18
+    codepoint: 128034
+    string:    🐢
+  - index:     19
+    codepoint: 128013
+    string:    🐍
+  - index:     20
+    codepoint: 128031
+    string:    🐟
+  - index:     21
+    codepoint: 128025
+    string:    🐙
+  - index:     22
+    codepoint: 128012
+    string:    🐌
+  - index:     23
+    codepoint: 129419
+    string:    🦋
+  - index:     24
+    codepoint: 128029
+    string:    🐝
+  - index:     25
+    codepoint: 128030
+    string:    🐞
+  - index:     26
+    codepoint: 128375
+    string:    🕷
+  - index:     27
+    codepoint: 127803
+    string:    🌻
+  - index:     28
+    codepoint: 127794
+    string:    🌲
+  - index:     29
+    codepoint: 127796
+    string:    🌴
+  - index:     30
+    codepoint: 127797
+    string:    🌵
+  - index:     31
+    codepoint: 127809
+    string:    🍁
+  - index:     32
+    codepoint: 127808
+    string:    🍀
+  - index:     33
+    codepoint: 127815
+    string:    🍇
+  - index:     34
+    codepoint: 127817
+    string:    🍉
+  - index:     35
+    codepoint: 127819
+    string:    🍋
+  - index:     36
+    codepoint: 127820
+    string:    🍌
+  - index:     37
+    codepoint: 127822
+    string:    🍎
+  - index:     38
+    codepoint: 127826
+    string:    🍒
+  - index:     39
+    codepoint: 127827
+    string:    🍓
+  - index:     40
+    codepoint: 129373
+    string:    🥝
+  - index:     41
+    codepoint: 129381
+    string:    🥥
+  - index:     42
+    codepoint: 129365
+    string:    🥕
+  - index:     43
+    codepoint: 127805
+    string:    🌽
+  - index:     44
+    codepoint: 127798
+    string:    🌶
+  - index:     45
+    codepoint: 127812
+    string:    🍄
+  - index:     46
+    codepoint: 129472
+    string:    🧀
+  - index:     47
+    codepoint: 129370
+    string:    🥚
+  - index:     48
+    codepoint: 129408
+    string:    🦀
+  - index:     49
+    codepoint: 127850
+    string:    🍪
+  - index:     50
+    codepoint: 127874
+    string:    🎂
+  - index:     51
+    codepoint: 127853
+    string:    🍭
+  - index:     52
+    codepoint: 127968
+    string:    🏠
+  - index:     53
+    codepoint: 128663
+    string:    🚗
+  - index:     54
+    codepoint: 128690
+    string:    🚲
+  - index:     55
+    codepoint: 9973
+    string:    ⛵
+  - index:     56
+    codepoint: 9992
+    string:    ✈
+  - index:     57
+    codepoint: 128641
+    string:    🚁
+  - index:     58
+    codepoint: 128640
+    string:    🚀
+  - index:     59
+    codepoint: 8986
+    string:    ⌚
+  - index:     60
+    codepoint: 9728
+    string:    ☀
+  - index:     61
+    codepoint: 11088
+    string:    ⭐
+  - index:     62
+    codepoint: 127752
+    string:    🌈
+  - index:     63
+    codepoint: 9730
+    string:    ☂
+  - index:     64
+    codepoint: 127880
+    string:    🎈
+  - index:     65
+    codepoint: 127872
+    string:    🎀
+  - index:     66
+    codepoint: 9917
+    string:    ⚽
+  - index:     67
+    codepoint: 9824
+    string:    ♠
+  - index:     68
+    codepoint: 9829
+    string:    ♥
+  - index:     69
+    codepoint: 9830
+    string:    ♦
+  - index:     70
+    codepoint: 9827
+    string:    ♣
+  - index:     71
+    codepoint: 128083
+    string:    👓
+  - index:     72
+    codepoint: 128081
+    string:    👑
+  - index:     73
+    codepoint: 127913
+    string:    🎩
+  - index:     74
+    codepoint: 128276
+    string:    🔔
+  - index:     75
+    codepoint: 127925
+    string:    🎵
+  - index:     76
+    codepoint: 127908
+    string:    🎤
+  - index:     77
+    codepoint: 127911
+    string:    🎧
+  - index:     78
+    codepoint: 127928
+    string:    🎸
+  - index:     79
+    codepoint: 127930
+    string:    🎺
+  - index:     80
+    codepoint: 129345
+    string:    🥁
+  - index:     81
+    codepoint: 128269
+    string:    🔍
+  - index:     82
+    codepoint: 128367
+    string:    🕯
+  - index:     83
+    codepoint: 128161
+    string:    💡
+  - index:     84
+    codepoint: 128214
+    string:    📖
+  - index:     85
+    codepoint: 9993
+    string:    ✉
+  - index:     86
+    codepoint: 128230
+    string:    📦
+  - index:     87
+    codepoint: 9999
+    string:    ✏
+  - index:     88
+    codepoint: 128188
+    string:    💼
+  - index:     89
+    codepoint: 128203
+    string:    📋
+  - index:     90
+    codepoint: 9986
+    string:    ✂
+  - index:     91
+    codepoint: 128273
+    string:    🔑
+  - index:     92
+    codepoint: 128274
+    string:    🔒
+  - index:     93
+    codepoint: 128296
+    string:    🔨
+  - index:     94
+    codepoint: 128295
+    string:    🔧
+  - index:     95
+    codepoint: 9878
+    string:    ⚖
+  - index:     96
+    codepoint: 9775
+    string:    ☯
+  - index:     97
+    codepoint: 128681
+    string:    🚩
+  - index:     98
+    codepoint: 128099
+    string:    👣
+  - index:     99
+    codepoint: 127838
+    string:    🍞

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang='en'>
+	<head>
+		<meta charset="utf-8">
+		<meta name='Description' content=''>
+
+		<title>Cash Account - Register a Cash Account to recieve BCH from an alias</title>
+
+		<link rel='icon' type='image/png' href='data:;base64,iVBORw0KGgo='>
+		<link type='text/css' rel='stylesheet' href='css/default.css'>
+		<link type='text/css' rel='stylesheet' href='css/elements.css'>
+		<link type='text/css' rel='stylesheet' href='css/index.css'>
+
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Mono" rel="stylesheet">
+
+		<script type='text/javascript' src='js/app.js'></script>1
+		<script type="text/javascript" src="lib/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="lib/jquery.qrcode.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/gh/emn178/js-sha256/build/sha256.min.js"></script>
+
+		<script type="text/javascript">
+			window.onscroll = function()
+			{
+				var scroll_position = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+				if(scroll_position > 16)
+				{
+					document.body.className = 'scrolled';
+				}
+				else if(document.body.className = 'scrolled')
+				{
+					document.body.className = 'not_scrolled';
+				}
+
+				if(typeof window['scroll_ready'] !== 'undefined')
+				{
+					var temp_y = window.scrollY + window.innerHeight * 0.5;
+
+					if(temp_y < window['scrolling_prev'] || temp_y > window['scrolling_next'])
+					{
+						for(index in window['navigation_nodes'])
+						{
+							if(temp_y > window['navigation_nodes'][index]['starts_at'] && temp_y < window['navigation_nodes'][index]['ends_at'])
+							{
+								document.getElementById('nav_' + window['nav_current']).className = '';
+								document.getElementById('nav_' + window['navigation_nodes'][index].id).className = 'shown';
+
+								window['scrolling_prev'] = window['navigation_nodes'][index]['starts_at'];
+								window['scrolling_next'] = window['navigation_nodes'][index]['ends_at'];
+								window['nav_current'] = window['navigation_nodes'][index].id;
+							}
+						}
+					}
+				}
+			}
+		</script>
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff"></head>
+	<body>
+
+		<div id="announcement" style="display: flex; justify-content: center; align-items: center; position: fixed; z-index: 99999; top: 0; width: 100%; height: 3rem; margin: 0; padding: 0; background-color: black; color: white;">
+		<!-- Advertising --><center><script type="text/javascript"
+		src="//uprimp.com/bnr.php?section=General&pub=875433&format=728x90&ga=g&bg=1"></script>
+		<noscript><a href="https://yllix.com/publishers/875433" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub/728x90.png"
+		style="border:none;margin:0;padding:0;vertical-align:baseline;" /></a></noscript></center>
+		<!-- Advertising -->
+		<!--In the case of a split of the #BitcoinCash network this november, this service will follow the non-IFP chain. (<a href="ttps://read.cash/@sha256_88ebd526/bitcoin-cash-bch-november-2020-upgrade-statement-f7c03159">Learn more</a>) -->
+		</div>
+		<nav id="navigation" style='top: 3rem;'>
+			<div id="navigation_list">
+				<a href="#introduction" id="nav_introduction" class="shown">
+					<i class="fas fa-bookmark"></i>
+					<span>INTRODUCTION</span>
+				</a>
+				<a href="#registration" id="nav_registration">
+					<i class="fas fa-pencil-alt"></i>
+					<span>REGISTRATION</span>
+				</a>
+				<a href="#lookup" id="nav_lookup">
+					<i class="fas fa-search-dollar"></i>
+					<span>LOOKUP</span>
+				</a>
+				<a href="#wallets" id="nav_wallets">
+					<i class="fas fa-wallet"></i>
+					<span>TOOLS</span>
+				</a>
+			<!--<a href="#testimonies" id="nav_testimonies">
+					<i class="fas fa-star"></i>
+					<span>TESTIMONIES</span>
+				</a>-->
+			</div>
+		</nav>
+		<section id='introduction'>
+			<div>
+				<header>&raquo;&nbsp;Cash Account</header>
+				<p>A Cash Account provides users with an easily shared and identifiable human-readable account name alias as a BCH cash payment destination.
+				<br><br><br><br>
+				</p>
+				<!--<p style='font-style: italic;'>by <b onclick="website.lookup_identifier(this.innerHTML); window.location = '#lookup';" style='cursor: pointer;'>Jonathan#100;</b> and <b onclick="website.lookup_identifier(this.innerHTML); window.location = '#lookup';" style='cursor: pointer;'>Robbot#102;</b></p>-->
+			</div>
+		</section>
+
+		<section id='registration'>
+			<form onsubmit='return false;'>
+				<!-- Step 1: You choose a name and BIP-47 payment code -->
+				<fieldset id='fieldset_create_transaction' class='active'>
+					<legend align="center">Choose<br>account name</legend>
+
+					<label>
+						<span>Enter the account name:</span>
+						<input id='alias_name' type='text' placeholder='SatoshiNakamoto' pattern='\w{1,99}' required autocomplete='off'>
+					</label>
+					<label>
+						<span>Enter the <b style='border-bottom: 0.05rem dashed rgba(0, 0, 0, 0.55); font-style: italic;' title='an address, payment code or stealth keypair'>payment address</b>:</span>
+						<textarea id='alias_payload' placeholder='qqgekzvw96vq5g57zwdfa5q6g609rrn0ycp33uc325' rows='5' name='' type=''></textarea>
+					</label>
+
+					<label>
+						<button id='alias_create_transaction' disabled>Create Register Transaction</button>
+					</label>
+				</fieldset>
+
+				<!-- Step 2: We create an on-chain transaction -->
+				<fieldset id='fieldset_broadcast_transaction' class='inactive'>
+					<legend align="center">Broadcast<br>transaction</legend>
+
+					<ul>
+						<li><span>Protocol</span><i title='OP_RETURN'>6A</i>&nbsp;<i title='push 4 bytes'>04</i>&nbsp;<i title='Cash Account'>01010101</i></span></li>
+						<li><span>Account Name</span><span><i id='alias_name_length' title='push 15 bytes'>0F</i>&nbsp;<b id='alias_name_hex' title='UTF-8 encoded name from: SatoshiNakamoto'>5361746F7368694E616B616D6F746F</b></span></li>
+						<li><span>Payment Data</span><span><i id='alias_payload_length' title='Push 21 bytes'>15</i>&nbsp;<i id='alias_payload_type' title='Type: Key Hash'>01</i>&nbsp;<b id='alias_payload_hex' title='Decoded Key Hash from: qqgekzvw96vq5g57zwdfa5q6g609rrn0ycp33uc325'>119B098E2E980A229E139A9ED01A469E518E6F26</b></span></li>
+					</ul>
+					<label>
+						<button id='alias_broadcast_transaction' disabled>Broadcast Register Transaction</button>
+					</label>
+				</fieldset>
+
+				<!-- Step 3: When a block is mined, define the alias -->
+				<fieldset id='fieldset_confirm_transaction' class='inactive'>
+					<legend align="center">Wait for block inclusion<br>(Average 10 minute wait period)</legend>
+
+					<ul>
+						<li><span>Expected Identifier</span><i id='alias_name_predication' title='Name'>SatoshiNakamoto</i>#<i id='alias_expected_blockheight' title='Calculated from the blockheight of the next block.'>567890;</i></li>
+						<li><span>Transaction Hash</span><span><i id='alias_transaction_hash' title='Transaction Hash'>7e5a1bda26244042d03d679b38f90cb83fd8a3507de3123da66ffdf934a1b241</i></span></span></li>
+						<li><span>Status</span><span><i id='alias_registration_status' title='Not yet created'>None</i><!--, <i id='alias_registration_status_collision' title='No competing registration for this name in the mempool'>Collision-Free</i>--></span></li>
+					</ul>
+					<label>
+						<button id='alias_lookup_transaction' onclick="website.lookup_identifier(this.innerHTML.substring(8), 199); window.location = '#lookup';" disabled>Lookup: SatoshiNakamoto</button>
+					</label>
+				</fieldset>
+			</form>
+		</section>
+		<section id='lookup'>
+			<form onsubmit='website.lookup_identifier(null, 999); return false;'>
+				<fieldset>
+					<legend>Look up Cash Account</legend>
+					<input id='lookup_search_string' name='' type='text' placeholder='Search for account...' />
+					<input type='submit' value='search' />
+					<ul id='result_list'></ul>
+				</fieldset>
+			</form>
+		</section>
+
+	<section id='wallets'><!-- Change these tags to "Tools" later. -->
+			<div>
+				<ul>
+					<li class='positive'>
+						<a href='https://www.cashwallet.com/' class='CASH WALLET'></a>
+						<a href='https://www.cashwallet.com/' class='status'><u>CASH WALLET</u></a>
+					</li>
+					<li class='positive'>
+						<a href='https://www.papercash.com/' class='PAPER CASH'></a>
+						<a href='https://www.papercash.com/' class='status'><u>PAPER CASH</u></a>
+					</li>
+						<li class='positive'>
+						<a href='https://www.cashprice.com/' class='CASH PRICE'></a>
+						<a href='https://www.cashprice.com/' class='status'><u>CASH PRICE</u></a>
+					</li>
+						<li class='positive'>
+						<a href='https://www.cashexplorer.com/' class='CASH EXPLORER'></a>
+						<a href='https://www.cashexplorer.com/' class='status'><u>CASH EXPLORER</u></a>
+					</li>
+				</ul>
+			</div>
+		</section> 
+	<!--<section id='testimonies'>
+			<div>
+				<ul>
+					<li>
+						"Testimonies" (testimonials) go here.
+					</li>
+				</ul>
+			</div>
+		</section> -->
+
+	<!--<nav id='links'>
+			Copyright Cash Account by Cash. All rights reserved. This software is not open source.
+			Cash Account - Register a Cash Account to recieve BCH from an alias™
+			Forked from MIT licensed:
+			<a href='https://gitlab.com/cash-accounts/specification'><i class="fab fa-gitlab"></i>&nbsp;Cash Accounts Specification</a> |
+			<a href='https://gitlab.com/cash-accounts/website/issues'><i class="fab fa-gitlab"></i>&nbsp;Website Bug Tracker</a> |
+			<a href='https://gitlab.com/cash-accounts/specification/blob/master/LICENSE'><i class="fa fa-copyright"></i>&nbsp;Licensed with MIT</a>
+		</nav>-->
+		<!-- Advertising --><center><script type="text/javascript"
+		src="//uprimp.com/bnr.php?section=General&pub=875433&format=728x90&ga=g&bg=1"></script>
+		<noscript><a href="https://yllix.com/publishers/875433" target="_blank"><img src="//ylx-aff.advertica-cdn.com/pub/728x90.png"
+		style="border:none;margin:0;padding:0;vertical-align:baseline;" /></a></noscript></center>
+		<!-- Advertising -->
+	</body>
+</html>

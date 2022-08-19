@@ -1,0 +1,16 @@
+- process:
+    - block+transaction: '000000000000000002abbeff5f6fb22a0b3b5c2685c6ef4ed2d2257ed54e9dcb590d1fdf7e04af0ee08f9194bb9e8d1971bdcbf55d29303d5bf32d4eae5e7136'
+    - sha256:            '37f1d9b19e25be4d310f3d4a798091ad38a2fb4a3fb66a82ff1d12e2e29a6230'
+    - last_4_bytes:      0xe29a6230
+    - modulus_100:       96
+  index:     96
+  codepoint: 0x262f
+  string:    ☯
+- process:
+    - block+transaction: '000000000000000002abbeff5f6fb22a0b3b5c2685c6ef4ed2d2257ed54e9dcbfe03cc8b31c595bd64320f18c6104dabe859979b4a8358498e2d58da076a8cbe'
+    - sha256:            '93475f4df0fa9d710e068689c00b68fe4f77a04a92f87b4503d54b9dc495d822'
+    - last_4_bytes:      0xc495d822
+    - modulus_100:       30
+  index:     30
+  codepoint: 0x01f335
+  string:    🌵

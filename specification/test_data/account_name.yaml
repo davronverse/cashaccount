@@ -1,0 +1,24 @@
+- valid:  yes
+  string: Jonathan
+  hex:    '4a6f6e617468616e'
+- valid:  yes
+  string: 4
+  hex:    '34'
+- valid:  yes
+  string: 123456789_123456789_123456789_123456789_123456789_123456789_123456789_123456789_123456789_123456789
+  hex:    '3132333435363738395f3132333435363738395f3132333435363738395f3132333435363738395f3132333435363738395f3132333435363738395f3132333435363738395f3132333435363738395f3132333435363738395f313233343536373839'
+- valid:  no
+  note:   length < 1
+  string: ""
+- valid:  no
+  note:   length > 99
+  string: 123456789_123456789_123456789_123456789_123456789_123456789_123456789_123456789_123456789_123456789_
+- valid:  no
+  note:   '- not in allowed characters'
+  string: a-b
+- valid:  no
+  note:   '" " not in allowed characters'
+  string: a b
+- valid:  no
+  note:   名 not in allowed characters
+  string: 名

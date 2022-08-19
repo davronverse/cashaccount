@@ -1,0 +1,21 @@
+{
+  "name": "rest-service",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "base58check": "^2.0.0",
+    "bchaddrjs": "^0.3.0",
+    "bitcore-lib-cash": "^0.19.0",
+    "cashaddrjs": "^0.3.2",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.15",
+    "node-bitcoin-rpc": "^1.1.3"
+  }
+}

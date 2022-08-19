@@ -1,0 +1,91 @@
+/* Include a reference to a local copy of the Roboto android font. */
+@font-face
+{
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Roboto'), local('Roboto-Regular'), url('../fonts/Roboto-Regular.ttf');
+}
+@font-face
+{
+	font-family: 'Roboto';
+	font-style: italic;
+	font-weight: 400;
+	src: local('Roboto Italic'), local('Roboto-Italic'), url('../fonts/Roboto-Italic.ttf');
+}
+@font-face
+{
+	font-family: 'Roboto';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Roboto Bold'), local('Roboto-Bold'), url('../fonts/Roboto-Bold.ttf');
+}
+@font-face
+{
+	font-family: 'Roboto';
+	font-style: italic;
+	font-weight: 700;
+	src: local('Roboto Bold Italic'), local('Roboto-BoldItalic'), url('../fonts/Roboto-BoldItalic.ttf');
+}
+
+/* Include a reference to the Noto Emoji (Color) set. */
+@font-face
+{
+	font-family: 'Noto Color Emoji';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Noto Color Emoji'), url('../fonts/NotoColorEmoji.ttf');
+}
+
+/* Collapse all whitespace. */
+*
+{
+	font-size: 0;
+}
+
+/* Normalize all paddings and margins */
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+/* Change layout model to include paddings and borders in object sizes. */
+*
+{
+	box-sizing: border-box;
+}
+
+/* Apply a default font */
+*
+{
+	font-family: 'Roboto';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 15px;
+}
+
+html { font-family: 'Roboto Mono'; font-size: 20px; }
+
+/* Stretch view to entire screen. */
+body
+{
+	width: 100%;
+	height: 100%;
+
+	padding: 0;
+	margin: 0;
+}
+
+/* Always show scrollbar. */
+body
+{
+	overflow-y: scroll;
+	overflow-x: auto;
+}
+
+/* Set the pages background color. */
+body
+{
+	background-color: rgb(75, 200, 70);
+}

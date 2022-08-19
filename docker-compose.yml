@@ -1,0 +1,54 @@
+version: "3.6"
+services:  
+  rest-service:
+    build:
+      context: .
+      dockerfile: ./docker/rest-service/Dockerfile
+    command: nodemon index.js
+    volumes:
+      - ./rest-service:/usr/src/app/
+      # - /usr/src/app/node_modules
+    restart: unless-stopped
+    depends_on:
+      - "mongo"
+      # - "bitcoin-node"
+    ports:
+      - "3000:3000"
+    env_file:
+      - ".env"
+
+  mongo:
+    image: mongo:latest
+    volumes:
+      - cash-account-mongo:/data/mongo
+    restart: unless-stopped
+    
+  # bitcoin-abc:
+  #   image: zquestz/bitcoin-abc
+  #   container_name: bitcoin-abc
+  #   command: bitcoind -conf=/config/bitcoin.conf -datadir=/data
+  #   stop_grace_period: 10m
+  #   restart: unless-stopped
+  #   healthcheck:
+  #     test: ["CMD", "/entrypoint.sh", "bitcoin-cli", "getinfo"]
+  #   ports:
+  #     - "8333:8333"
+  #   volumes:
+  #     - /data/bitcoin-abc:/data
+  #     - ./config/bitcoin-abc/bitcoin.conf:/config/bitcoin.conf
+
+  nginx:
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    restart: unless-stopped
+    depends_on:
+      - "mongo"
+    ports:
+      - "80:80"
+    volumes:
+      - ./www:/usr/share/nginx/html
+
+volumes:
+  cash-account-mongo:
+    driver: local

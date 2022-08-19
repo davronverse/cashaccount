@@ -1,0 +1,37 @@
+- valid:       yes
+  type_name:   key hash
+  type_hex:    '01'
+  address:     bitcoincash:qr4aadjrpu73d2wxwkxkcrt6gqxgu6a7usxfm96fst
+  hash160_hex:   'ebdeb6430f3d16a9c6758d6c0d7a400c8e6bbee4'
+  hex:         '01ebdeb6430f3d16a9c6758d6c0d7a400c8e6bbee4'
+- valid:       no
+  note:        version byte and checksum should not be included in the op return hex
+  type_name:   key hash
+  type_hex:    '01'
+  address:     bitcoincash:qr4aadjrpu73d2wxwkxkcrt6gqxgu6a7usxfm96fst
+  hash160_hex:     'ebdeb6430f3d16a9c6758d6c0d7a400c8e6bbee4'
+  hex:         '0100ebdeb6430f3d16a9c6758d6c0d7a400c8e6bbee4ed09d068'
+- valid:       no
+  note:        mismatch between payment type (01-key hash) and address type (script hash)
+  type_hex:    '01'
+  address:     bitcoincash:pp4d24pemra2k3mths8cjxpuu6yl3a5ctvcp8mdkm9
+- valid:       no
+  note:        unknown type
+  type_hex:    '9999'
+- valid:       yes
+  type_name:   script hash
+  type_hex:    '02'
+  address:     bitcoincash:pp4d24pemra2k3mths8cjxpuu6yl3a5ctvcp8mdkm9
+  hash160_hex:   'ebdeb6430f3d16a9c6758d6c0d7a400c8e6bbee4'
+  hex:         '02ebdeb6430f3d16a9c6758d6c0d7a400c8e6bbee4'
+- valid:       no
+  note:        mismatch between payment type (02-script hash) and address type (key hash)
+  type_hex:    '02'
+  address:     bitcoincash:qr4aadjrpu73d2wxwkxkcrt6gqxgu6a7usxfm96fst
+- valid:       yes
+  type_name:   payment code
+  type_hex:    '03'
+  xpub:        'xpub6D3t231wUi5v9PEa8mgmyV7Tovg3CzrGEUGNQTfm9cK93je3PgX9udfhzUDx29pkeeHQBPpTSHpAxnDgsf2XRbvLrmbCUQybjtHx8SUb3JB'
+  code:        'PM8TJTLJbPRGxSbc8EJi42Wrr6QbNSaSSVJ5Y3E4pbCYiTHUskHg13935Ubb7q8tx9GVbh2UuRnBc3WSyJHhUrw8KhprKnn9eDznYGieTzFcwQRya4GA'
+  code_data:     '010002b85034fb08a8bfefd22848238257b252721454bbbfba2c3667f168837ea2cdad671af9f65904632e2dcc0c6ad314e11d53fc82fa4c4ea27a4a14eccecc478fee00000000000000000000000000'
+  hex:         '03010002b85034fb08a8bfefd22848238257b252721454bbbfba2c3667f168837ea2cdad671af9f65904632e2dcc0c6ad314e11d53fc82fa4c4ea27a4a14eccecc478fee00000000000000000000000000'
